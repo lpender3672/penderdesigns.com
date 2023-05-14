@@ -1,6 +1,6 @@
 # Pender Designs Website
 
-My website to showcase my work and interests. Also working on a dynamic website using flask.
+My website to showcase my work and interests.
 
 Project based on Hydejack, a Jekyll theme
 A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
