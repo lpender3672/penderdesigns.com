@@ -1,3 +1,3 @@
-[submodule "legacy/"]
+[submodule "legacy"]
     path = legacy
     url = "https://github.com/lpender3672/Louis.github.io.git"
