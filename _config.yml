@@ -20,7 +20,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 Louis Pender
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -29,7 +29,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               Engineering student at Cambridge University with an interest in robotics, programming and fluid mechanics.
 
 # A list of keywords for your blog
 keywords:              []
@@ -49,12 +49,20 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             Projects
+    url:               /projects/
+  - title:             Journey
+    url:               /journey/
+  - title:             Design Library
+    url:               /library/
   - title:             Example
     url:               /example/
   - title:             Documentation
     url:               /docs/
   - title:             About
     url:               /about/
+  - title:             Legacy Site
+    url:               /legacy/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -145,6 +153,11 @@ defaults:
   # but we want them to be `WebPage`s:
   - scope:
       type:            projects
+    values:
+      seo:
+        type:          WebPage
+  - scope:
+      type:            legacy
     values:
       seo:
         type:          WebPage
