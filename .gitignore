@@ -53,4 +53,4 @@ _zip
 /assets/js/*hydejack-*
 /_sass/*/__*__/*
 
-Gemfile.lock
+#Gemfile.lock

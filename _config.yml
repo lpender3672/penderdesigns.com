@@ -73,7 +73,7 @@ legal:
     url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2021. All rights reserved.
+copyright:             © 2024 Louis Pender. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -94,7 +94,7 @@ theme: jekyll-theme-hydejack
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/sidebar-bg.JPEG
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -160,11 +160,6 @@ defaults:
       seo:
         type:          WebPage
   - scope:
-      type:            featured_categories
-    values:
-      seo:
-        type:          WebPage
-  - scope:
       type:            featured_tags
     values:
       seo:
@@ -181,7 +176,7 @@ kramdown:
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      G-QNV06R6WQ1
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
@@ -261,7 +256,7 @@ hydejack:
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
-  cookies_banner:      false
+  cookies_banner:      true
 
   # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
   # Note that this setting has no effect when using the free version.
@@ -273,7 +268,7 @@ hydejack:
   hide_dates:          false
 
   # TODO
-  hide_last_modified:  false
+  hide_last_modified:  true
 
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
@@ -301,13 +296,6 @@ hydejack:
 # ----------------------------------------------------------------------------------------
 
 collections:
-  featured_categories:
-    permalink:         /:name/
-    output:            true
-
-  featured_tags:
-    permalink:         /tag-:name/
-    output:            true
 
   projects:
     permalink:         /projects/:path/

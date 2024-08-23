@@ -1,8 +1,14 @@
 ---
 layout: post
 title: Fluid Simulations
-description: >
-  A page showing how regular markdown content is styled in Hydejack.
-image: /assets/img/projects/fluidsims/fan1.jpg
+image: /assets/img/projects/fluidsims/fan1.png
 sitemap: false
 ---
+
+Air flow caused by spinning fan
+
+![](/assets/img/fluidsims/fan1.png)
+
+Fluid flow through heat sink with heat source attached 
+
+![](/assets/img/fluidsims/heat_source.gif)
