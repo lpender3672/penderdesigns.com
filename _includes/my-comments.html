@@ -1,0 +1,22 @@
+{% assign disqus = site.disqus | default:site.disqus_shortname %}
+{% if disqus %}
+<div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script src="https://giscus.app/client.js"
+        data-repo="lpender3672/penderdesigns.com"
+        data-repo-id="R_kgDOJi8Lxw"
+        data-category="General"
+        data-category-id="DIC_kwDOJi8Lx84Ch4Vo"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+{% endif %}
+
+

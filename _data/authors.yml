@@ -15,8 +15,8 @@ author1:
     path:            /assets/img/pfp256.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            /assets/img/pfp256.jpg
-      2x:            /assets/img/pfp.jpg
+      1x:            /assets/img/me/pfp256.jpg
+      2x:            /assets/img/me/pfp.jpg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide

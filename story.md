@@ -11,7 +11,8 @@ redirect_from:
 
 # My Joruney
 
-<!--author-->
+Growing up in Cornwall I was exposed to lots of engineering
+history exploring mine houses, designed for pumping water out
+the mines, or the shaking tables and lift motors at Geevor Mine.
 
-## Hydejack
-
+![](/assets/img/me/aboutme0.jpeg)

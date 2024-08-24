@@ -39,7 +39,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/pfp.jpg
+logo:                  /assets/img/me/pfp.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -57,10 +57,6 @@ menu:
     url:               /story/
   - title:             Design Library
     url:               /library/
-  - title:             Documentation
-    url:               /docs/
-  - title:             About
-    url:               /about/
   - title:             Legacy Site
     url:               /legacy/
 
@@ -144,10 +140,10 @@ defaults:
       sitemap:         false
 
   # # You can use the following to enable comments on all posts.
-  # - scope:
-  #     type:            posts
-  #   values:
-  #     comments:        true
+  - scope:
+      type:            posts
+    values:
+      comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -182,7 +178,7 @@ google_analytics:      G-QNV06R6WQ1
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <username>
+disqus:                gicus
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -195,7 +191,7 @@ google_analytics:      G-QNV06R6WQ1
 
 hydejack:
   # Configure the order of complementary content on blog posts
-  post_addons:         [about, newsletter, related, random, comments]
+  post_addons:         [comments, related, random]
 
   # Configure the order of complementary content on project pages
   project_addons:      [about, newsletter, other, comments]
