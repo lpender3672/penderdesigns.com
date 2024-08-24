@@ -260,7 +260,7 @@ Performance degredation due to fouling is also considered but only the results a
 
 ## Performance Comparison
 
-Tthere were small modifications made to the software for some groups unique designs.
+There were small modifications made to the software for some groups unique designs.
 
 ![2024 Performance Comparison](/assets/img/projects/heat_exchanger/2024comparison.png){#fig:2024_performance
 width="80%"}
