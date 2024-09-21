@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fluid Simulations
+category: projects
 image: /assets/img/projects/fluidsims/fan1.png
 sitemap: false
 ---

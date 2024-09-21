@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ball Balancer
+category: projects
 image: /assets/img/projects/Ball_balancer/ball_balancer.jpg
 sitemap: false
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Legacy Website
+category: projects
 image: /assets/img/projects/legacy.jpg
 sitemap: false
 ---
