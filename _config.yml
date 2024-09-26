@@ -51,10 +51,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             My Story
-    url:               /story/
   - title:             All Posts
     url:               /
+  - title:             My Story
+    url:               /story/
   - title:             Projects
     url:               /projects/
   - title:             Legacy Site
