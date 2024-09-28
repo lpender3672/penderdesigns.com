@@ -2,12 +2,10 @@
 author:
 - lwp26
 date: May 2024
-title: Heat Exchanger Project
+title: Heat Exchanger
 category: projects
 image: /assets/img/projects/heat_exchanger/final_tested.jpg
 ---
-
-# Heat Exchanger Project
 
 **This page is an overview of my project report**.
 
