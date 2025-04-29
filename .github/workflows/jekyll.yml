@@ -29,7 +29,13 @@ concurrency:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    if: true
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04]
+        ruby: [ruby-3.1.7]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
