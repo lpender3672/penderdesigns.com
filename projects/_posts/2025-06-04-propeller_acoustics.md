@@ -28,7 +28,7 @@ despite the dimensionless analysis.
 ![](/assets/img/projects/propeller_acoustics/collection.png)
 
 
-Key contributions:
+Key points of work:
 - Designing two experimental rigs to measure aerodynamic and acoustic performance, isolating propeller noise from motor noise, and ensuring consistency between setups.
 - Audio processing including reducing spectral leakage and the discrete integration of harmonics to capture broadened peaks.
 - Data recording app to sample several microphones simultaneously and safely control the setup remotely.
