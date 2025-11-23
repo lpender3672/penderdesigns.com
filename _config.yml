@@ -57,8 +57,6 @@ menu:
     url:               /story/
   - title:             Projects
     url:               /projects/
-  - title:             Services
-    url:               /services/
   - title:             Legacy Site
     url:               /legacy/
 
