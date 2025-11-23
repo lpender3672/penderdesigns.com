@@ -34,8 +34,7 @@ layout: base
     <article class="project-tile">
       {% if item.image %}
         <a class="tile-link" href="{{ item.url | relative_url }}">
-          <!-- <img class="tile-image" src="{{ item.image | relative_url }}" alt="{{ item.title }}"> -->
-           {% picture item.image alt=item.title class="tile-image" %}
+          <img class="tile-image" src="{{ item.image | relative_url }}" alt="{{ item.title }}">
         </a>
       {% endif %}
       <div class="tile-body">

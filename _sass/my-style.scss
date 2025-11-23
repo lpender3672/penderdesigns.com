@@ -168,3 +168,13 @@
     background: #e0e0e0;
   }
 }
+
+// Fallback grid for no-JS users
+.no-js .project-grid,
+noscript + .project-grid {
+  .project-tile {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+}
