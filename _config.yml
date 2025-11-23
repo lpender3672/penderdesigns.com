@@ -155,12 +155,6 @@ defaults:
         type:          WebPage
   
   - scope:
-      type:            services
-    values:
-      seo:
-        type:          WebPage
-
-  - scope:
       type:            legacy
     values:
       seo:
