@@ -17,6 +17,9 @@ experimental data Various optimization algorithms were tested with
 constraints and the results are presented.
 <!--more-->
 
+* toc
+{:toc}
+
 ## Introduction
 
 Heat exchangers have a wide range of applications in HVAC, power

@@ -12,7 +12,6 @@
     margin: 1rem 0;
   }
 }
-
 // Add this to prevent flash of single column before Masonry loads
 .project-grid {
   margin: 0 auto;
@@ -48,14 +47,14 @@
   }
   
   .page-description {
-    color: #666;
+    color: var(--gray);
     font-size: 1.1em;
+    transition: color 1s ease;
   }
 }
 
 // Column width sizer
-.grid-sizer,
-.project-tile {
+.grid-sizer {
   width: 31%;
   
   @media (max-width: 768px) {
@@ -76,19 +75,33 @@
   }
 }
 
-// Individual project tiles
+// Individual project tiles - MERGED DEFINITION
 .project-tile {
+  // Responsive widths
+  width: 31%;
+  
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+  
+  // Styling
   margin-bottom: 20px;
-  background: #fff;
+  background-color: var(--body-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, 
+              background-color 1s ease, border-color 1s ease;
   
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 }
 
@@ -119,11 +132,12 @@
   font-weight: 600;
   
   a {
-    color: inherit;
+    color: var(--heading-color);
     text-decoration: none;
+    transition: color 1s ease;
     
     &:hover {
-      color: #0066cc;
+      color: var(--link-color);
     }
   }
 }
@@ -132,16 +146,18 @@
   margin: 0 0 10px 0;
   font-size: 0.9em;
   line-height: 1.5;
-  color: #666;
+  color: var(--gray);
+  transition: color 1s ease;
 }
 
 .tile-meta {
   font-size: 0.85em;
-  color: #999;
+  color: var(--menu-text);
   display: flex;
   gap: 10px;
   align-items: center;
   flex-wrap: wrap;
+  transition: color 1s ease;
   
   time {
     font-style: italic;
@@ -158,23 +174,14 @@
 .tile-category {
   display: inline-block;
   padding: 2px 8px;
-  background: #f0f0f0;
+  background-color: var(--gray-bg);
   border-radius: 3px;
   font-size: 0.85em;
-  color: #666;
+  color: var(--gray);
   text-transform: capitalize;
+  transition: background-color 1s ease, color 1s ease;
   
   &:hover {
-    background: #e0e0e0;
-  }
-}
-
-// Fallback grid for no-JS users
-.no-js .project-grid,
-noscript + .project-grid {
-  .project-tile {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 20px;
+    background-color: var(--border-color);
   }
 }
