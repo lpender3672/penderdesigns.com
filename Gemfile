@@ -48,6 +48,7 @@ group :jekyll_plugins do
   # Non-Github Pages plugins:
   gem "jekyll-last-modified-at"
   gem "jekyll-compose"
+  gem "jekyll-picture-tag"
 end
 
 gem "github-pages", group: :jekyll_plugins

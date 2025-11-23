@@ -192,6 +192,22 @@ disqus:                gicus
 # PRO version only!
 # tinyletter:            <username>
 
+picture:
+  source: "assets/img/"
+  output: "assets/gen/"
+  suppress_warnings: true
+
+  presets:
+    default:
+      formats: [avif, webp, jp2, png, gif, original]
+      format_quality:
+        avif: 50
+      sizes: 
+        full_width: 740px
+      size: 'calc(100vw - 30px)'
+      dimension_attributes: true
+      attributes:
+        img: 'style="width: 100%; height: auto;"'
 
 # Hydejack Settings
 # ----------------------------------------------------------------------------------------
