@@ -12,3 +12,176 @@
     margin: 1rem 0;
   }
 }
+// Add this to prevent flash of single column before Masonry loads
+.project-grid {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  
+  // Hide tiles until Masonry is ready
+  &:not(.masonry-ready) .project-tile {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  // Fade in once positioned
+  &.masonry-ready .project-tile {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// Optional: Page header styling
+.page-header {
+  margin-bottom: 2rem;
+  
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-description {
+    color: var(--gray);
+    font-size: 1.1em;
+    transition: color 1s ease;
+  }
+}
+
+// Column width sizer
+.grid-sizer {
+  width: 31%;
+  
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+// Gutter sizer
+.gutter-sizer {
+  width: 2%;
+  
+  @media (max-width: 480px) {
+    width: 0;
+  }
+}
+
+// Individual project tiles - MERGED DEFINITION
+.project-tile {
+  // Responsive widths
+  width: 31%;
+  
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+  
+  // Styling
+  margin-bottom: 20px;
+  background-color: var(--body-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, 
+              background-color 1s ease, border-color 1s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+}
+
+.tile-link {
+  display: block;
+  text-decoration: none;
+  
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+.tile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.tile-body {
+  padding: 15px;
+}
+
+.tile-title {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  
+  a {
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 1s ease;
+    
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+}
+
+.tile-excerpt {
+  margin: 0 0 10px 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: var(--gray);
+  transition: color 1s ease;
+}
+
+.tile-meta {
+  font-size: 0.85em;
+  color: var(--menu-text);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: color 1s ease;
+  
+  time {
+    font-style: italic;
+  }
+}
+
+// Category tags
+.tile-categories {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.tile-category {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: var(--gray-bg);
+  border-radius: 3px;
+  font-size: 0.85em;
+  color: var(--gray);
+  text-transform: capitalize;
+  transition: background-color 1s ease, color 1s ease;
+  
+  &:hover {
+    background-color: var(--border-color);
+  }
+}

@@ -1,0 +1,43 @@
+<!-- Load Masonry libraries -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+  
+  function initMasonry() {
+    var grid = document.querySelector(".project-grid");
+    if (!grid) return;
+    
+    // Skip if already initialized
+    if (grid.classList.contains('masonry-ready')) return;
+    
+    // Wait for images, then initialize
+    imagesLoaded(grid, function() {
+      new Masonry(grid, {
+        itemSelector: ".project-tile",
+        columnWidth: ".grid-sizer",
+        gutter: ".gutter-sizer",
+        percentPosition: true
+      });
+      
+      grid.classList.add('masonry-ready');
+      console.log("Masonry: Ready");
+    });
+  }
+  
+  // Listen to Hydejack's 'after' event
+  var hyPushState = document.querySelector('hy-push-state');
+  if (hyPushState) {
+    hyPushState.addEventListener('after', initMasonry);
+  }
+  
+  // Initial page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMasonry);
+  } else {
+    initMasonry();
+  }
+})();
+</script>

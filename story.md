@@ -1,8 +1,5 @@
 ---
 layout: about
-image: /assets/img/blog/hydejack-9.jpg
-redirect_from:
-  - /download/
 ---
 
 # My Journey
