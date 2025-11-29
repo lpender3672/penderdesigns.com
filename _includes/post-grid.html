@@ -1,0 +1,50 @@
+<div class="post-grid">
+  <div class="grid-sizer"></div>
+  <div class="gutter-sizer"></div>
+  
+  {% if include.category %}
+    {% assign filtered_items = site.categories[include.category] %}
+  {% elsif include.categories %}
+    {% assign filtered_items = "" | split: "" %}
+    {% for cat in include.categories %}
+      {% assign cat_items = site.categories[cat] %}
+      {% assign filtered_items = filtered_items | concat: cat_items %}
+    {% endfor %}
+  {% else %}
+    {% assign filtered_items = site.posts %}
+  {% endif %}
+  
+  {% for item in filtered_items %}
+    <article class="post-tile">
+      {% if item.image %}
+        <a class="post-tile-link" href="{{ item.url | relative_url }}">
+          <img class="post-tile-image" src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+        </a>
+      {% endif %}
+      <div class="post-tile-body">
+        <h3 class="post-tile-title">
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        </h3>
+        {% if item.excerpt %}
+          <p class="post-tile-excerpt">{{ item.excerpt | strip_html | truncate: 220 }}</p>
+        {% else %}
+          <p class="post-tile-excerpt">{{ item.content | strip_html | truncate: 220 }}</p>
+        {% endif %}
+        <div class="post-tile-meta">
+          {% if item.date %}
+            <time datetime="{{ item.date | date_to_xmlschema }}">
+              {{ item.date | date: "%b %-d, %Y" }}
+            </time>
+          {% endif %}
+          {% if item.categories %}
+            <span class="post-tile-categories">
+              {% for cat in item.categories %}
+                <span class="post-tile-category">{{ cat }}</span>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
