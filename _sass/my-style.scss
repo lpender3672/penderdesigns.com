@@ -13,7 +13,7 @@
   }
 }
 // Add this to prevent flash of single column before Masonry loads
-.project-grid {
+.post-grid {
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -76,7 +76,7 @@
 }
 
 // Individual project tiles - MERGED DEFINITION
-.project-tile {
+.post-tile {
   // Responsive widths
   width: 31%;
   
@@ -105,7 +105,26 @@
   }
 }
 
-.tile-link {
+.image-tile {
+  width: 31%;
+  // Styling
+  margin-bottom: 20px;
+  background-color: var(--body-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, 
+              background-color 1s ease, border-color 1s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+}
+
+.post-tile-link {
   display: block;
   text-decoration: none;
   
@@ -114,7 +133,7 @@
   }
 }
 
-.tile-image {
+.post-tile-image {
   width: 100%;
   height: auto;
   display: block;
@@ -122,11 +141,11 @@
   max-height: 200px;
 }
 
-.tile-body {
+.post-tile-body {
   padding: 15px;
 }
 
-.tile-title {
+.post-tile-title {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   font-weight: 600;

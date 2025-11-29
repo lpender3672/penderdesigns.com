@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: base
 title: Project Collection
 category: projects
 description: >
@@ -7,3 +7,5 @@ description: >
 grouped: true
 slug: projects
 ---
+
+{% include post-grid.html category="projects" %}
