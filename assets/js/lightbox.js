@@ -25,25 +25,34 @@
     
     var lightbox = GLightbox({ selector: '.glightbox' });
     
-    document.addEventListener('click', function(e) {
-      var nextBtn = e.target.closest('.gnext');
-      var prevBtn = e.target.closest('.gprev');
-      
-      if (nextBtn || prevBtn) {
-        setTimeout(function() {
-          var activeSlide = document.querySelector('.gslide.current');
-          if (activeSlide) {
-            var activeImg = activeSlide.querySelector('img');
-            if (activeImg) {
-              var activeLink = Array.from(lightboxLinks).find(function(link) {
-                return link.href === activeImg.src;
-              });
-              if (activeLink) {
-                activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
+    function scrollToCurrentSlide() {
+      setTimeout(function() {
+        var activeSlide = document.querySelector('.gslide.current');
+        if (activeSlide) {
+          var activeImg = activeSlide.querySelector('img');
+          if (activeImg) {
+            var activeLink = Array.from(lightboxLinks).find(function(link) {
+              return link.href === activeImg.src;
+            });
+            if (activeLink) {
+              activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
           }
-        }, 100);
+        }
+      }, 100);
+    }
+    
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('.gnext') || e.target.closest('.gprev')) {
+        scrollToCurrentSlide();
+      }
+    });
+    
+    document.addEventListener('keydown', function(e) {
+      if (document.querySelector('.glightbox-open')) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          scrollToCurrentSlide();
+        }
       }
     });
   }
