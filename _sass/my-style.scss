@@ -19,15 +19,13 @@
   position: relative;
   
   // Hide tiles until Masonry is ready
-  &:not(.masonry-ready) .project-tile {
+  &:not(.masonry-ready) .post-tile {
     opacity: 0;
-    visibility: hidden;
   }
   
   // Fade in once positioned
-  &.masonry-ready .project-tile {
+  &.masonry-ready .post-tile {
     opacity: 1;
-    visibility: visible;
     transition: opacity 0.3s ease;
   }
   
