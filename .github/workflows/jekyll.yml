@@ -45,6 +45,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" --strict-front-matter
         env:
           JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # avoids GitHub API rate limits
 
       # Non-blocking initially: there are ~54 pre-existing issues at the time of
       # adding this check (mostly pandoc-style cross-refs in heat_exchanger.md

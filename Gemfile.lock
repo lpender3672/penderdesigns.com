@@ -58,6 +58,8 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+    faraday-retry (2.4.0)
+      faraday (~> 2.0)
     ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x64-mingw-ucrt)
     ffi (1.17.2-x86_64-linux-gnu)
@@ -335,6 +337,7 @@ PLATFORMS
 
 DEPENDENCIES
   duktape
+  faraday-retry
   github-pages
   html-proofer (~> 5.0)
   jekyll (~> 3.9.3)
