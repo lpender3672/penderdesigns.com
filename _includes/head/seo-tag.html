@@ -1,0 +1,8 @@
+{% comment %}<!--
+Override of theme's seo-tag.html. Calls jekyll-seo-tag with title=false to
+suppress its `<title>` (which would be `{site.title} | {site.tagline}`),
+then emits our own short title. Other SEO output (og:title, twitter:title,
+JSON-LD, canonical, meta description) is unaffected.
+-->{% endcomment %}
+{% seo title=false %}
+<title>{{ site.title }}</title>
