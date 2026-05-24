@@ -60,18 +60,13 @@ menu:
   - title:             Legacy Site
     url:               /legacy/
 
-# Add links to the footer.
-# Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+# Add links to the footer (e.g. cookie/privacy policy). Leave commented if none.
+# legal:
+#   - title:             Privacy
+#     url:               /privacy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2024 Louis Pender. All rights reserved.
+copyright:             © 2026 Louis Pender. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -87,7 +82,7 @@ paginate_path:         /:num/
 remote_theme: hydecorp/hydejack@v9
 
 
-# Customizaton
+# Customisation
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
