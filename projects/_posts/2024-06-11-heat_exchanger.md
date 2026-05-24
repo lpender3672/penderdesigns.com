@@ -10,10 +10,10 @@ image: /assets/img/projects/heat_exchanger/final_tested.jpg
 **This page is an overview of my project report**.
 
 This report presents the development of a software tool to help solve
-constrained design optimization of a shell and tube heat exchanger.
+constrained design optimisation of a shell and tube heat exchanger.
 The software is developed in Python and uses LMTD and NTU methods to
 solve for the output parameters. Computational model is compared with
-experimental data Various optimization algorithms were tested with
+experimental data Various optimisation algorithms were tested with
 constraints and the results are presented.
 <!--more-->
 
@@ -27,7 +27,7 @@ generation and chemical industries. These essential components are
 typically much larger than other components in a system and can
 significantly contribute to the overall cost. Designing high
 performance, low cost heat exchangers involves solving complex
-optimization problems with multiple constraints.
+optimisation problems with multiple constraints.
 The software is developed in Python and implements Kerns, LMTD and NTU methods to solve
 for heat exchanger performance.
 
@@ -37,7 +37,7 @@ for heat exchanger performance.
 -   To analyse pressure loss and heat transfer for various shell and
     tube heat exchanger designs.
 
--   To produce a software tool for constrained design optimization of
+-   To produce a software tool for constrained design optimisation of
     shell and tube heat exchangers.
 
 -   To select an optimal design to be compared with other groups designs
@@ -112,7 +112,7 @@ to be calculated from the P-NTU temperature effectiveness, $$P_1$$, and
 heat capacity rate ratio $$R_1$$ from well defined relations
 [1].
 
-## Optimization Problem
+## Optimisation Problem
 
 The goal is to maximise the heat transfer rate $$\dot{Q}$$ subject to
 physical constraints.
@@ -166,11 +166,11 @@ in the later stages from both reduced area and temperature difference.
 
 ### Algorithms
 
-Three optimization algorithms were tested: Brute force, Sequential Least
-Squares Programming, and Simplicial Homology Global Optimization.
-The Simplicial Homology Global Optimization algorithm was chosen for its
+Three optimisation algorithms were tested: Brute force, Sequential Least
+Squares Programming, and Simplicial Homology Global Optimisation.
+The Simplicial Homology Global Optimisation algorithm was chosen for its
 robustness and ability to find optima in all cases. SHGO is a
-derivative-free global optimization algorithm that efficiently
+derivative-free global optimisation algorithm that efficiently
 subdivides the search space into smaller regions (simplicial complexes)
 to find the global optimum [3].
 
@@ -187,8 +187,8 @@ different designs.
 The software features object oriented design with classes for the heat
 exchanger and fluid path components. The structure is designed to easily
 modify fluid properties and introduce new flow components. Seperate
-optimization threads are used to prevent the GUI from freezing during
-long calculations. A log displays optimization progress, warning and
+optimisation threads are used to prevent the GUI from freezing during
+long calculations. A log displays optimisation progress, warning and
 error messages. There is also a diagram of the heat exchanger which
 helps the user visualise the flow path of multi-stage designs.
 
@@ -211,7 +211,7 @@ width="60%"}
 | 2 | 4 | Triangle | 4,4,4,4 | 7,7 | 0.2173 | 0.5714 | 0.3209 | 14136 | 0.2828 | 1.091 | **3.478** |
 | 2 | 4 | Square | 4,4,4,4 | 7,7 | 0.2173 | 0.5728 | 0.3209 | 14103 | 0.2816 | 1.091 | **3.478** |
 
-*Optimized Designs for a variety of heat exchanger configurations, with the limiting constraint in bold.*
+*Optimised Designs for a variety of heat exchanger configurations, with the limiting constraint in bold.*
 
 It was interesting to see that the software tool was finding longer
 solutions with additional tubes in later hot passes over shorter designs
