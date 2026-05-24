@@ -19,7 +19,7 @@ This is a project I started to learn about image processing and computer vision.
 
 <div style="max-width: 100%; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <video style="height: 100%; width: 80%; object-fit: contain" controls="">
-      <source src="/assets/images/Ball_balancer/ball_not_balancing.mp4" type="video/mp4">
+      <source src="/assets/img/projects/Ball_balancer/ball_not_balancing.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
