@@ -53,6 +53,10 @@ end
 
 gem "github-pages", group: :jekyll_plugins
 
+group :test do
+  gem "html-proofer", "~> 5.0"
+end
+
 #gem 'wdm' if Gem.win_platform?
 #gem "tzinfo-data" if Gem.win_platform?
 
