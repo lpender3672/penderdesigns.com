@@ -1,7 +1,11 @@
-{% assign disqus = site.disqus | default:site.disqus_shortname %}
-{% if disqus %}
-<div id="disqus_thread"></div>
-<noscript>Please enable JavaScript to view the comments powered by gicus</a></noscript>
+{% comment %}
+  Comments are powered by Giscus. The legacy `site.disqus` key (in _config.yml)
+  is reused as an on/off toggle for backwards compatibility — set it to any
+  truthy value to enable comments.
+{% endcomment %}
+{% assign comments_enabled = site.disqus | default:site.disqus_shortname %}
+{% if comments_enabled %}
+<noscript>Please enable JavaScript to view the comments powered by Giscus.</noscript>
 <script src="https://giscus.app/client.js"
         data-repo="lpender3672/penderdesigns.com"
         data-repo-id="R_kgDOJi8Lxw"
@@ -18,5 +22,3 @@
         async>
 </script>
 {% endif %}
-
-
