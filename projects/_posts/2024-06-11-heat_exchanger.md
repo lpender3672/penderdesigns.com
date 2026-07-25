@@ -192,12 +192,10 @@ long calculations. A log displays optimisation progress, warning and
 error messages. There is also a diagram of the heat exchanger which
 helps the user visualise the flow path of multi-stage designs.
 
-![Screenshot of the software tool.](/assets/img/projects/heat_exchanger/software.png){#fig:software
-width="60%"}
+![Screenshot of the software tool.](/assets/img/projects/heat_exchanger/software.png)
 
 ### Best Designs from Constraints
 
-| ------------------------ | ---------- |
 | $$ N_\text{cold} $$ | $$ N_\text{hot} $$ | Pattern | Tubes | Baffles | $$ L_\text{tube} $$ | $$ \dot{m}_1 $$ | $$ \dot{m}_2 $$ | $$ \dot{Q} $$ | $$ \epsilon $$ | Mass | $$ \Sigma L_\text{tube} $$ |
 | ----------------- | -------------------------- | ---------- | --------- | --------- | ------------------------------ | ------------- | ------------- | ----------- | ------------ | ----------------------------- | ----------------------------- |
 | 1 | 1 | Triangle | 13 | 8 | 0.2678 | 0.5892 | 0.4778 | 12297 | 0.1446 | 1.095 | **3.482** |
@@ -219,8 +217,7 @@ with an equal number of tubes in each hot pass. However, this design
 with a different number of tubes in each section is much harder to
 manufacture than a circularly symmetric design.
 
-From table [1](#table:designs){reference-type="ref"
-reference="table:designs"} the yellow row shows the optimal design
+From the table above, the yellow row shows the optimal design
 predicted by the software has 1 cold stage and 3 hot stages. This was
 the design proposed by our pair and selected by the group. During the
 development of CAD, slight modifications were made and checked with the
@@ -234,7 +231,7 @@ baffles, as the cold inlet and outlet nozzles are on the same side of
 the shell.
 
 ![Final design with 1 cold stage and 3 hot
-stages.](/assets/img/projects/heat_exchanger/final.png){#fig:final_design width="85%"}
+stages.](/assets/img/projects/heat_exchanger/final.png)
 
 ## Software Summary
 
@@ -264,8 +261,7 @@ Performance degredation due to fouling is also considered but only the results a
 
 There were small modifications made to the software for some groups unique designs.
 
-![2024 Performance Comparison](/assets/img/projects/heat_exchanger/2024comparison.png){#fig:2024_performance
-width="80%"}
+![2024 Performance Comparison](/assets/img/projects/heat_exchanger/2024comparison.png)
 
 ## Uncertainty
 
@@ -284,14 +280,9 @@ The uncertainty in the fit to previous data is also considered with a 90\% confi
 | Group-D | 3.174105             | 0.132264             | 1.318523                           | 1.318523                           | 0.714964                      | 1.235442                      | 3.950561                      | 12.69                         |
 | Group-E | 3.860030             | 0.137442             | 1.371735                           | 1.371735                           | 0.735290                      | 1.162906                      | 4.535972                      | 12.84                         |
 
-![$\dot{Q}$ Uncertainty Regions for 2024 Designs given uncorrected
-[1](#tab:uncorrected_uncertainty){reference-type="ref"
-reference="tab:uncorrected_uncertainty"}](/assets/img/projects/heat_exchanger/Qdot_result_bands.png){#fig:uncertainty_regions
-width="99%"}
+![Qdot uncertainty regions for the 2024 designs, using the uncorrected uncertainties tabulated above.](/assets/img/projects/heat_exchanger/Qdot_result_bands.png)
 
-The performance of the 2024 designs is shown in figure
-[3](#fig:2024_performance){reference-type="ref"
-reference="fig:2024_performance"}. With little confidence, our software
+The performance of the 2024 designs is shown in the comparison figure above. With little confidence, our software
 predicts that our design will perform the best out of all groups. It can
 also be seen that despite small manufacturing modifications made to our
 design, it is still close to the optimal found. Group C's design was
@@ -308,19 +299,16 @@ their configurations.
 
 ## Group results 
 
-![$\dot{Q}$ results](/assets/img/projects/heat_exchanger/2024_results.png){#fig:Qdot_results width="60%"}
+![$\dot{Q}$ results](/assets/img/projects/heat_exchanger/2024_results.png)
 
-Figure [3](#fig:Qdot_results){reference-type="ref"
-reference="fig:Qdot_results"} shows the experimental results for the
+The results figure above shows the experimental results for the
 heat exchanger performance of each group. Group D's heat exchanger
 performed the best at 14.77 kW, exceeding our calculated value by 8.7%,
 but within the uncertainty band of 12.69%. Our group E heat exchanger
 had the second best performance 9.7% below that of Group D, and 6.2%
 below our calculated value. The remaining groups ranked C, A and then B
 at 16.5%, 19.9% and 26.3% below group D, which is the same order
-predicted by our software. Figure
-[3](#fig:Qdot_results){reference-type="ref"
-reference="fig:Qdot_results"} also shows that these last 3 groups are
+predicted by our software. The results figure above also shows that these last 3 groups are
 outside of the uncertainty bands with experimental values being -13.0%,
 -15.1% and -20.1% below the respective calculated values.
 
