@@ -19,17 +19,12 @@ Large inductors and capacitors were also a lot cheaper to buy separately but wer
 
 ## Status
 
-The board does drive a motor. A small drone motor has been spun for about a minute before the driver overheats and it
-has to be stopped, so the proof of concept is there. It also makes a horrible screeching noise while it runs.
+The board does drive a motor. A small drone motor has been spun for about a minute before the driver gets too hot and has
+to be stopped, so the idea works. It makes a horrible screeching noise while its running though. It shouldnt be making
+any noise at all, so somethings wrong with the commutation, which would explain the heat as well.
 
-The noise is the more interesting symptom of the two. A drive that is commutating cleanly should be fairly quiet, so
-screeching says the current going into the motor isn't where it should be relative to the rotor, and that would explain
-the heat as well rather than being a separate problem. Current that isn't producing torque still produces losses in the
-windings and the bridge. So I don't think this is a thermal path issue, I think the thermals are downstream of whatever
-is wrong with the drive.
-
-My money is on the encoder angle calibration. If the electrical angle offset is out then the current vector is
-misaligned, torque per amp collapses and everything else follows from that.
+My money is on the encoder angle calibration. It would be interesting to feed a mic into a scope and compare what comes
+out of it against the set PWM and target rpm frequencies.
 
 Work is paused at the moment as the summer has been busy.
 
