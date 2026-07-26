@@ -10,6 +10,8 @@ A pin-jointed truss solver thats quick and easy to use.
 This project was started in 2022 to save time doing structures in parts 1A and 1B of the cambridge engineering course. However, its only recently been updated enough to be useful.
 
 <!--more-->
+Source: [lpender3672/Pin_Structure_Solver](https://github.com/lpender3672/Pin_Structure_Solver)
+
 
 ![Truss Demo](/assets/img/projects/pin_solver/menu.png)
 

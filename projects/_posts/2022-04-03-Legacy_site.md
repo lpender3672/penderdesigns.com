@@ -13,3 +13,5 @@ LaTeXMathML used to display equations by Dr. Peter Jipsen
 The source code for this site can be found on my Github
 
 <!--more-->
+Source: [lpender3672/Louis.github.io](https://github.com/lpender3672/Louis.github.io)
+
