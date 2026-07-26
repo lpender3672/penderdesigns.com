@@ -20,6 +20,8 @@ reductions in aerodynamic efficiency. The quietest propeller overall was the lar
 despite the dimensionless analysis.
 
 <!--more-->
+Source: [lpender3672/propeller-acoustics](https://github.com/lpender3672/propeller-acoustics)
+
 
 ![](/assets/img/projects/propeller_acoustics/aero_setup.jpg)
 ![](/assets/img/projects/propeller_acoustics/sweep_series.jpg)

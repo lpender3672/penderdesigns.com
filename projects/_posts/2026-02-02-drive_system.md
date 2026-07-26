@@ -1,6 +1,6 @@
 ---
 layout: post
-title: In progress drive system
+title: Field-Oriented Motor Drive System
 category: projects
 image: /assets/img/projects/drivesys/board.jpg
 ---
@@ -12,10 +12,21 @@ A slow project to iterate a low cost FOC cycloidal drive system.
 The schematic and DRV8353 driver layout for the very first layout is taken from the [Open Source Motor Controller](https://github.com/GyrocopterLLC/flatmcu).
 Modifications to the oscillator, swapping of micro usb to usb-c and changing the encoder to SPI were made to improve the design and lower the cost.
 
-The first board prototype has been made and is currently being tested.
+The first board prototype has been made and brought up.
 To save money only small passive components were placed in PCB assembly.
 Hand soldering of the STM32 LQFP package went ok but proved difficult for the DRV8353 which has a smaller QFN package.
 Large inductors and capacitors were also a lot cheaper to buy separately but were easy to solder on.
+
+## Status
+
+The board does drive a motor. A small drone motor has been spun for about a minute before the driver gets too hot and has
+to be stopped, so the idea works. It makes a horrible screeching noise while its running though. It shouldnt be making
+any noise at all, so somethings wrong with the commutation, which would explain the heat as well.
+
+My money is on the encoder angle calibration. It would be interesting to feed a mic into a scope and compare what comes
+out of it against the set PWM and target rpm frequencies.
+
+Work is paused at the moment as the summer has been busy.
 
 ![](/assets/img/projects/drivesys/board-cad.png)
 

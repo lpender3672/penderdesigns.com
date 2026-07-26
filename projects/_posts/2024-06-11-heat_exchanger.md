@@ -16,6 +16,8 @@ solve for the output parameters. Computational model is compared with
 experimental data Various optimisation algorithms were tested with
 constraints and the results are presented.
 <!--more-->
+Source: [lpender3672/shell_tube_heat_exchanger](https://github.com/lpender3672/shell_tube_heat_exchanger)
+
 
 * toc
 {:toc}
