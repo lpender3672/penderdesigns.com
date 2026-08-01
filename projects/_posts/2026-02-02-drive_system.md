@@ -28,6 +28,9 @@ out of it against the set PWM and target rpm frequencies.
 
 Work is paused at the moment as the summer has been busy.
 
+The assembled board wired up to a BLDC motor and SPI encoder on the bench for testing.
+![](/assets/img/projects/drivesys/motor.jpeg)
+
 ![](/assets/img/projects/drivesys/board-cad.png)
 
 A cycloidal gearbox has been designed

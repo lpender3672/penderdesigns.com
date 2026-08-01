@@ -53,7 +53,7 @@ author:
 menu:
   - title:             All Posts
     url:               /
-  - title:             My Story
+  - title:             About me
     url:               /story/
   - title:             Projects
     url:               /projects/

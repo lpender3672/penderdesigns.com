@@ -2,7 +2,7 @@
 layout: post
 title: Ball Balancer
 category: projects
-image: /assets/img/projects/Ball_balancer/ball_balancer.jpg
+image: /assets/img/projects/Ball_balancer/modern.jpeg
 sitemap: false
 ---
 
@@ -11,6 +11,8 @@ Source: [lpender3672/ball_balancer](https://github.com/lpender3672/ball_balancer
 
 
 This is a project I started to learn about image processing and computer vision. I wanted to make a ball balancer that would keep a ball on a plate. However, this was before I had any understanding of control theory and so the project was not very successful. However I did learn a lot about image processing, computer vision and serial communcation between the computer and arduino. 
+
+# First design
 
 ![](/assets/img/projects/Ball_balancer/ball_balancer.jpg)
 
@@ -25,3 +27,9 @@ This is a project I started to learn about image processing and computer vision.
     Your browser does not support the video tag.
   </video>
 </div>
+
+# Second design
+
+A few months later I built a second design. This uses three higher torque servos with larger and better made connections which better define the plate.
+
+![](/assets/img/projects/Ball_balancer/modern.jpeg)
