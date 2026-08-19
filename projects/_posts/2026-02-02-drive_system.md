@@ -19,17 +19,45 @@ Large inductors and capacitors were also a lot cheaper to buy separately but wer
 
 ## Status
 
-The board does drive a motor. A small drone motor has been spun for about a minute before the driver gets too hot and has
-to be stopped, so the idea works. It makes a horrible screeching noise while its running though. It shouldnt be making
-any noise at all, so somethings wrong with the commutation, which would explain the heat as well.
+The board drives a motor closed loop. It used to make a horrible screeching noise and get too hot to run for more than
+about a minute, which I had put down to the commutation being wrong somewhere.
 
-My money is on the encoder angle calibration. It would be interesting to feed a mic into a scope and compare what comes
-out of it against the set PWM and target rpm frequencies.
+That got fixed by testing it against the scope instead of guessing. The
+[oscilloscope MCP tools](/projects/2026-07-26-mcp_hardware_tools/) are pulled into the firmware repo as a uv dependency,
+so the hardware in the loop tests can set the scope up, capture the phase currents and encoder signals and assert on them
+from pytest. Commands and telemetry go over J-Link RTT, which reads and writes target memory over SWD without halting or even slowing the core. Halting the energised power stage would release the precious magic smoke that makes it work.
 
-Work is paused at the moment as the summer has been busy.
+With the hardware-in-loop tests in place the actual faults were findable. The rotating frame ran backwards, because the encoder counts against the commanded phase sequence and no direction sign was applied, so `iq` stopped meaning torque as soon as the shaft
+turned. Standstill hides this completely, which is why alignment always looked fine. Alignment itself assumed a 20 V bus
+on a board that measures its own, so the same constants meant about 15 A at 12 V and 25 A at 19 V. `dt` was hardcoded to
+one PWM period while the loop actually ran at whatever rate the encoder DMA finished at, feedback was low passed at
+100 Hz around a winding that responds in a few hundred microseconds, and the encoder driver had a 350 ns datasheet guard
+implemented as a 1 ms tick wait.
+
+Two of these cancelled each other out for a while. The speed estimate was taken in raw encoder counts while torque acts
+in the direction corrected frame, so positive `iq` read as negative speed, and that only showed up once the alignment
+offset was fixed.
+
+It now holds a 600 rpm setpoint under a cascaded speed controller at about 2 rad/s of ripple, with the control loop
+running every 100 to 150 us and the encoder watchdog silent. Motor, encoder and board constants are one set of named
+objects with the rest derived at compile time, rather than seven loose literals, several of which were wrong.
+
+The laser tachometer in the video reads 587 rpm against that 600 rpm setpoint though, so the shaft is about 2% slow and
+the loop doesnt know it. The speed it is controlling to is derived from encoder counts, so if the counts per revolution
+or the pole pair count are wrong then it holds its own number perfectly and the real shaft sits somewhere else. That
+needs diagnosing before any of the numbers off it mean much.
+
+Which is the general problem, the drive is still running on constants off a label rather than measured off this motor.
+Inductance is the obvious one to do first as Kv cannot give it and it is what sets the proportional gain, but the
+encoder counts, pole pairs and alignment offset all want measuring and checking against each other too. There also isnt
+a startup self check, so a wrong alignment or torque sign runs away to 18 A instead of refusing to start.
 
 The assembled board wired up to a BLDC motor and SPI encoder on the bench for testing.
 ![](/assets/img/projects/drivesys/motor.jpeg)
+
+And the first smooth closed loop spin off it.
+
+<iframe width="483" height="859" src="https://www.youtube.com/embed/QmeIvKenTGU" title="First (smooth) closed loop spin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ![](/assets/img/projects/drivesys/board-cad.png)
 
